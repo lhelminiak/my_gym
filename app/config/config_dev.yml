@@ -9,7 +9,7 @@ framework:
 
 web_profiler:
     toolbar: true
-    intercept_redirects: false
+    intercept_redirects: true
 
 monolog:
     handlers:
@@ -43,3 +43,9 @@ monolog:
 
 twig:
   cache: false
+
+swiftmailer:
+    delivery_address: lukehelminiak@gmail.com
+#   transport: gmail
+#   username:
+#   password
