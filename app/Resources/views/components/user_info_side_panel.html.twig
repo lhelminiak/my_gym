@@ -1,0 +1,87 @@
+{#<div class="fixed-sm-200 fixed-lg-250 pull-sm-left">#}
+    {#<div class="panel">#}
+
+        {#<div class="text-center pad-all bord-btm">#}
+            {#<div class="pad-ver">#}
+                {#{% if user.imageURL %}#}
+                    {#<img src="{{ user.imageURL }}" class="img-lg img-border img-circle" alt="Profile Picture">#}
+                {#{% else %}#}
+                    {#<img src="{{ asset('img/placeholders/default.png') }}" class="img-lg img-border img-circle" alt="Profile Picture">#}
+                {#{% endif %}#}
+            {#</div>#}
+
+            {#<h4 class="text-lg text-overflow mar-no">{{ user.firstName }} {{ user.lastName }}</h4>#}
+
+        {#</div>#}
+
+        {#<div>#}
+
+            {#<h4 class="text-semibold text-main pad-all mar-no">About Me</h4>#}
+
+            {#<p> {{ user.aboutMe }} </p>#}
+
+
+
+
+        {#</div>#}
+
+        {#<div class="profileCardsStarts">#}
+
+            {#<h4 class="text-bold">Followers:  {{ user.followers }} </h4>#}
+
+            {#<h4 class="text-bold">Following: {{ user.following }} </h4>#}
+
+
+
+        {#</div>#}
+
+
+    {#</div>#}
+
+
+{#</div>#}
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-4 col-md-4 user-details">
+            <div class="user-image">
+                {% if user.imageURL %}
+                    <img src="{{ user.imageURL }}" class="img-lg img-border img-circle" alt="Profile Picture">
+                {% else %}
+                    <img src="{{ asset('img/placeholders/default.png') }}" class="img-lg img-border img-circle" alt="Profile Picture">
+                {% endif %}
+
+            </div>
+
+            <div class="user-info-block">
+                <div class="user-heading">
+                    <h3> {{ user.firstName }} {{ user.lastName }} </h3>
+                    <span class="help-block"> {{ user.username }} </span>
+                </div>
+
+
+                <ul>
+                    <li>
+                        <span>Posts</span>
+                        <span>2000</span>
+                    </li>
+
+                    <li>
+                        <span>Followers</span>
+                        <span> {{ user.followers }}</span>
+                    </li>
+
+                    <li>
+                        <span>Following</span>
+                        <span> {{ user.following }} </span>
+
+                    </li>
+
+
+                </ul>
+            </div>
+
+        </div>
+    </div>
+</div>
+
