@@ -65,6 +65,30 @@ class User extends BaseUser
     private $following;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="facebookURL", type="string", nullable=true)
+     */
+    private $facebookURL;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="instagramURL", type="string", nullable=true)
+     */
+    private $instagramURL;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="twitterURL", type="string", nullable=true)
+     */
+    private $twitterURL;
+
+
+//    Relationships
+
+    /**
      * @var ArrayCollection
      *
      * @ORM\OneToMany(targetEntity="AppBundle\Entity\Post", mappedBy="user" )
@@ -299,5 +323,53 @@ class User extends BaseUser
     public function setFollowing($following)
     {
         $this->following = $following;
+    }
+
+    /**
+     * @return string
+     */
+    public function getFacebookURL()
+    {
+        return $this->facebookURL;
+    }
+
+    /**
+     * @param string $facebookURL
+     */
+    public function setFacebookURL($facebookURL)
+    {
+        $this->facebookURL = $facebookURL;
+    }
+
+    /**
+     * @return string
+     */
+    public function getInstagramURL()
+    {
+        return $this->instagramURL;
+    }
+
+    /**
+     * @param string $instagramURL
+     */
+    public function setInstagramURL($instagramURL)
+    {
+        $this->instagramURL = $instagramURL;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTwitterURL()
+    {
+        return $this->twitterURL;
+    }
+
+    /**
+     * @param string $twitterURL
+     */
+    public function setTwitterURL($twitterURL)
+    {
+        $this->twitterURL = $twitterURL;
     }
 }

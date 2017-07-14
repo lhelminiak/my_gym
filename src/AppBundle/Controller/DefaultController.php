@@ -11,15 +11,17 @@ use Symfony\Component\HttpKernel\Controller\ArgumentResolver\RequestValueResolve
 
 class DefaultController extends Controller
 {
+
+
     /**
+     * @return \Symfony\Component\HttpFoundation\Response
      * @Route("/", name="homepage")
      */
-    public function indexAction(Request $request)
-    {
-        // replace this example code with whatever you need
-        return $this->render('default/index.html.twig', [
-            'base_dir' => realpath($this->getParameter('kernel.project_dir')).DIRECTORY_SEPARATOR,
-        ]);
+    public function showHomePageAction(Request $request){
+
+
+        return $this->render(':Social:home.html.twig');
+
     }
 
     /**
@@ -35,24 +37,6 @@ class DefaultController extends Controller
         ]);
     }
 
-
-
-
-    public function showUserSidePanelAction(){
-        $user = $this->getUser();
-
-
-        return $this->render(':components:user_info_side_panel.html.twig', array(
-            'user' => $user
-
-
-        ));
-
-
-
-    }
-
-    
 
 
 

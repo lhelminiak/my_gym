@@ -1,87 +1,81 @@
-{#<div class="fixed-sm-200 fixed-lg-250 pull-sm-left">#}
-    {#<div class="panel">#}
-
-        {#<div class="text-center pad-all bord-btm">#}
-            {#<div class="pad-ver">#}
-                {#{% if user.imageURL %}#}
-                    {#<img src="{{ user.imageURL }}" class="img-lg img-border img-circle" alt="Profile Picture">#}
-                {#{% else %}#}
-                    {#<img src="{{ asset('img/placeholders/default.png') }}" class="img-lg img-border img-circle" alt="Profile Picture">#}
-                {#{% endif %}#}
-            {#</div>#}
-
-            {#<h4 class="text-lg text-overflow mar-no">{{ user.firstName }} {{ user.lastName }}</h4>#}
-
-        {#</div>#}
-
-        {#<div>#}
-
-            {#<h4 class="text-semibold text-main pad-all mar-no">About Me</h4>#}
-
-            {#<p> {{ user.aboutMe }} </p>#}
+{% extends 'base.html.twig' %}
 
 
-
-
-        {#</div>#}
-
-        {#<div class="profileCardsStarts">#}
-
-            {#<h4 class="text-bold">Followers:  {{ user.followers }} </h4>#}
-
-            {#<h4 class="text-bold">Following: {{ user.following }} </h4>#}
-
-
-
-        {#</div>#}
-
-
-    {#</div>#}
-
-
-{#</div>#}
-
-<div class="container">
+{% block body %}
+<div class="container-fluid">
     <div class="row">
-        <div class="col-sm-4 col-md-4 user-details">
-            <div class="user-image">
-                {% if user.imageURL %}
-                    <img src="{{ user.imageURL }}" class="img-lg img-border img-circle" alt="Profile Picture">
-                {% else %}
-                    <img src="{{ asset('img/placeholders/default.png') }}" class="img-lg img-border img-circle" alt="Profile Picture">
-                {% endif %}
+        <div class="col-md-12">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
 
-            </div>
+                    <div class="panel-body text-center">
+                        <div class="row">
+                            <div class="col-md-12 ">
+                                    <a class="" href="#">
 
-            <div class="user-info-block">
-                <div class="user-heading">
-                    <h3> {{ user.firstName }} {{ user.lastName }} </h3>
-                    <span class="help-block"> {{ user.username }} </span>
+                                        {% if user.imageURL %}
+                                            <img src="{{ user.imageURL }}" class="img-lg img-border img-circle" alt="Profile Picture" style="width: 180px; height: 180px;">
+                                        {% else %}
+                                            <img src="{{ asset('img/placeholders/default.png') }}" class="img-lg img-border img-circle" alt="Profile Picture" style="width: 180px; height: 180px;">
+                                        {% endif %}
+                                    </a>
+                            </div>
+                            <div class="col-md-12">
+
+                                <h2>{{ user.firstName }} {{ user.lastName }}</h2>
+
+                                <p>{{ user.aboutMe }}</p>
+
+                                <div class="stats col-xs-12">
+
+                                    <a href="#" class="stat">
+                                        <strong>{{ user.posts.count }}</strong>
+                                        Posts
+
+                                    </a>
+                                    <a href="#" class="stat">
+                                        <strong>{{ user.followers }}</strong>
+                                        Followers
+
+                                    </a>
+                                    <a href="#" class="stat">
+                                        <strong>{{ user.following }}</strong>
+                                        Following
+
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="IdFooter" class="panel-footer text-center">
+
+                        <ul class="social-network social-circle">
+
+                            <li><a href="{{ user.facebookURL }}" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="{{ user.twitterURL }}" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="{{ user.instagramURL }}" class="icoInstagram" title="Instagram"> <i class="fa fa-instagram"></i></a></li>
+
+
+                        </ul>
+                    </div>
                 </div>
-
-
-                <ul>
-                    <li>
-                        <span>Posts</span>
-                        <span>2000</span>
-                    </li>
-
-                    <li>
-                        <span>Followers</span>
-                        <span> {{ user.followers }}</span>
-                    </li>
-
-                    <li>
-                        <span>Following</span>
-                        <span> {{ user.following }} </span>
-
-                    </li>
-
-
-                </ul>
             </div>
-
         </div>
     </div>
 </div>
 
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
