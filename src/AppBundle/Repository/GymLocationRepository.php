@@ -10,4 +10,11 @@ namespace AppBundle\Repository;
  */
 class GymLocationRepository extends \Doctrine\ORM\EntityRepository
 {
+
+//    public function getGymLocationForUserQuery(){
+//
+//    }
+
+
+
 }

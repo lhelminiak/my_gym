@@ -20,6 +20,13 @@ class ComponentController extends Controller
     public function renderNewPostFormViewAction(){
 
 
+        $lifts = $this->getDoctrine()->getRepository('AppBundle:Lift')->findAll();
+
+
+        return $this->render(':components:new_post_form.html.twig', array(
+            'lifts' => $lifts
+
+        ));
 
 
     }

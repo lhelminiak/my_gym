@@ -1,10 +1,93 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-6 col-xs-12">
+            <div class="well well-sm well-social-post">
+                <form>
+                    <ul class="list-inline" id='list_PostActions'>
+                        <li value="0" class='active' id="new_post_select"><a href='#'>New Post</a></li>
+                        <li value="1" id="new_record_select"><a href='#'>New Record</a></li>
+                        <li value="2" id="new_lift_request_select"><a href='#'>Lift Request</a></li>
+                    </ul>
 
-</body>
-</html>
+
+                    <div id="new_record_input_fields" class="row new-record-input-fields">
+                        <div class="col-md-4 col-xs-4">
+
+                            <select class="form-control" id="new_record_lift_select">
+                                <option value="">Select a lift..</option>
+                                {% for lift in lifts %}
+                                    <option value="{{ lift.id }}">{{ lift.name }}</option>
+                                {% endfor %}
+                            </select>
+
+                        </div>
+
+                        <div class="col-md-4 col-xs-4">
+
+                            <input id="new_record_weight_input" type="number" class="form-control" placeholder="Weight" aria-describedby="helpBlock"/>
+
+                        </div>
+
+                        <div class="col-md-4 col-xs-4">
+
+                            <input id="new_record_reps_input" type="number" class="form-control" placeholder="Reps"/>
+
+                        </div>
+                    </div>
+
+
+
+
+                    <div id="new_lift_request_fields" class="row new-lift-request-input-fields">
+
+                        <div class="col-md-4 col-xs-4">
+
+                            <select class="form-control" id="new_lift_request_lift_select">
+                                <option value="">Select a lift..</option>
+                                {% for lift in lifts %}
+                                    <option value="{{ lift.id }}">{{ lift.name }}</option>
+                                {% endfor %}
+                            </select>
+
+                        </div>
+
+                        <div class="col-md-4 col-xs-4">
+
+                            <select class="form-control" id="new_lift_request_gym_select">
+                                <option value="">Select a gym..</option>
+
+                            </select>
+
+                        </div>
+
+                        <div class="col-md-4 col-xs-4">
+                            <div class="form-group">
+                                <div class="input-group date" id="dateTimePicker">
+                                    <input type="text" class="form-control"/>
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+
+                                </div>
+
+
+                            </div>
+
+
+                        </div>
+
+
+                    </div>
+
+                    <textarea class="form-control text-area" placeholder="What's in your mind?"></textarea>
+                    <ul class='list-inline post-actions'>
+                        <li><a href="#"><span class="glyphicon glyphicon-camera"></span></a></li>
+                        <li><a href="#" class='glyphicon glyphicon-user'></a></li>
+                        <li><a href="#" class='glyphicon glyphicon-map-marker'></a></li>
+                        <li class='pull-right'><a href="#" class='btn btn-primary btn-xs'>Post</a></li>
+                    </ul>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

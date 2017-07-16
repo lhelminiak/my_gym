@@ -43,7 +43,7 @@ class Lift
     /**
      * @var int
      *
-     * @ORM\Column(name="category", type="integer")
+     * @ORM\Column(name="category", type="integer", nullable=true)
      */
     private $category;
 

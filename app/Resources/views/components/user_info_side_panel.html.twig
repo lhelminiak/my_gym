@@ -1,7 +1,4 @@
-{% extends 'base.html.twig' %}
 
-
-{% block body %}
 <div class="container-fluid">
     <div class="row">
         <div class="col-md-12">
@@ -11,7 +8,7 @@
 
                     <div class="panel-body text-center">
                         <div class="row">
-                            <div class="col-md-12 ">
+                            <div class="col-md-12">
                                     <a class="" href="#">
 
                                         {% if user.imageURL %}
@@ -27,23 +24,33 @@
 
                                 <p>{{ user.aboutMe }}</p>
 
-                                <div class="stats col-xs-12">
+                                <div class="row stats">
 
-                                    <a href="#" class="stat">
-                                        <strong>{{ user.posts.count }}</strong>
-                                        Posts
+                                    <div class="col-xs-4">
+                                        <a href="#" class="stat">
+                                            <strong>{{ user.posts.count }}</strong>
+                                            Posts
 
-                                    </a>
-                                    <a href="#" class="stat">
-                                        <strong>{{ user.followers }}</strong>
-                                        Followers
+                                        </a>
+                                    </div>
 
-                                    </a>
-                                    <a href="#" class="stat">
-                                        <strong>{{ user.following }}</strong>
-                                        Following
+                                    <div class="col-xs-4">
+                                        <a href="#" class="stat">
+                                            <strong>{{ user.followers }}</strong>
+                                            Followers
 
-                                    </a>
+                                        </a>
+                                    </div>
+
+                                    <div class="col-xs-4">
+
+                                        <a href="#" class="stat">
+                                            <strong>{{ user.following }}</strong>
+                                            Following
+
+                                        </a>
+                                    </div>
+
                                 </div>
 
                             </div>
@@ -67,15 +74,3 @@
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-{% endblock %}

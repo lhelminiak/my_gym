@@ -346,6 +346,54 @@ class Post
     {
         $this->location = $location;
     }
+
+    /**
+     * @return \DateTime
+     */
+    public function getLiftTime()
+    {
+        return $this->liftTime;
+    }
+
+    /**
+     * @param \DateTime $liftTime
+     */
+    public function setLiftTime($liftTime)
+    {
+        $this->liftTime = $liftTime;
+    }
+
+    /**
+     * @return int
+     */
+    public function getWeight()
+    {
+        return $this->weight;
+    }
+
+    /**
+     * @param int $weight
+     */
+    public function setWeight($weight)
+    {
+        $this->weight = $weight;
+    }
+
+    /**
+     * @return int
+     */
+    public function getReps()
+    {
+        return $this->reps;
+    }
+
+    /**
+     * @param int $reps
+     */
+    public function setReps($reps)
+    {
+        $this->reps = $reps;
+    }
 }
 
 
