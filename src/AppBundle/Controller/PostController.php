@@ -19,6 +19,9 @@ class PostController extends Controller
      * @Route("/ajax_new_post", name="ajaxNewPost")
      */
     public function newPostAction(Request $request){
+
+
+
         $request->isXmlHttpRequest();
 
         if(!$request->isXmlHttpRequest()){
@@ -33,13 +36,25 @@ class PostController extends Controller
 
         $type = $request->request->get("type");
 
-        $lift = $em->getReference('AppBundle:Lift', $request->request->get("lift_id"));
 
-        $weight = $request->request->get("weight");
+//        $post = new Post($user, $content, $type, $weight, $reps, $lift);
 
-        $reps = $request->request->get("reps");
 
-        $post = new Post($user, $content, $type, $weight, $reps, $lift);
+        if($type == 0){
+            $post = new Post($user, $content, $type);
+
+        }
+        elseif ($type == 1){
+
+            $lift = $em->getReference('AppBundle:Lift', $request->request->get("lift_id"));
+
+            $weight = $request->request->get("weight");
+
+            $reps = $request->request->get("reps");
+
+
+            $post = new Post($user, $content, $type, $weight, $reps, $lift);
+        }
 
 
         $em->persist($post);

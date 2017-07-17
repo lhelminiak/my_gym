@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="38629718-e38e-45b8-97cd-c2b084b65627" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/datepicker.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/bootstrap-datepicker.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/moment.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/moment.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/components/new_post_form.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/components/new_post_form.html.twig" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/PostController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/PostController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Lift.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Lift.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Entity/Post.php" afterPath="$PROJECT_DIR$/src/AppBundle/Entity/Post.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/components/new_post.js" afterPath="$PROJECT_DIR$/web/js/components/new_post.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/post.js" afterPath="$PROJECT_DIR$/web/js/post.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,7 +20,7 @@
       <file leaf-file-name="Post.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Post.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
+            <state relative-caret-position="391">
               <caret line="143" column="28" lean-forward="false" selection-start-line="143" selection-start-column="28" selection-end-line="143" selection-end-column="28" />
               <folding />
             </state>
@@ -45,10 +37,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new_post_form.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="new_post_form.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/components/new_post_form.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1019">
+            <state relative-caret-position="725">
               <caret line="77" column="54" lean-forward="false" selection-start-line="77" selection-start-column="54" selection-end-line="77" selection-end-column="54" />
               <folding />
             </state>
@@ -58,20 +50,20 @@
       <file leaf-file-name="new_post.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/js/components/new_post.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="586">
-              <caret line="88" column="29" lean-forward="true" selection-start-line="88" selection-start-column="29" selection-end-line="88" selection-end-column="29" />
+            <state relative-caret-position="126">
+              <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PostController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PostController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/PostController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="41" column="22" lean-forward="false" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
+            <state relative-caret-position="56">
+              <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding>
-                <element signature="e#978#994#0#PHP" expanded="true" />
+                <element signature="e#1182#1198#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -86,18 +78,6 @@
                 <element signature="e#1072#1088#0#Twig" expanded="false" />
                 <element signature="e#1292#1316#0#Twig" expanded="false" />
                 <element signature="e#1455#1478#0#Twig" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap-datepicker.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/bootstrap-datepicker.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -173,8 +153,8 @@
         <option value="$PROJECT_DIR$/app/Resources/views/components/new_post_form.html.twig" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Lift.php" />
         <option value="$PROJECT_DIR$/web/js/post.js" />
-        <option value="$PROJECT_DIR$/src/AppBundle/Controller/PostController.php" />
         <option value="$PROJECT_DIR$/src/AppBundle/Entity/Post.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Controller/PostController.php" />
         <option value="$PROJECT_DIR$/web/js/components/new_post.js" />
       </list>
     </option>
@@ -199,10 +179,13 @@
             <id />
           </State>
           <State>
-            <id>Error handlingJavaScript</id>
+            <id>CSS</id>
           </State>
           <State>
-            <id>General</id>
+            <id>Code quality toolsCSS</id>
+          </State>
+          <State>
+            <id>Data flow issuesJavaScript</id>
           </State>
           <State>
             <id>GeneralJavaScript</id>
@@ -214,17 +197,18 @@
             <id>PHP</id>
           </State>
           <State>
-            <id>PHPDocPHP</id>
+            <id>Probable bugsJavaScript</id>
           </State>
           <State>
-            <id>Spelling</id>
+            <id>SQL</id>
+          </State>
+          <State>
+            <id>TypeScript</id>
+          </State>
+          <State>
+            <id>XML</id>
           </State>
         </expanded-state>
-        <selected-state>
-          <State>
-            <id>TodoComment</id>
-          </State>
-        </selected-state>
       </profile-state>
     </entry>
   </component>
@@ -693,7 +677,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="Errors" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
@@ -836,12 +820,12 @@
       <workItem from="1499798153922" duration="122000" />
       <workItem from="1499888056441" duration="4511000" />
       <workItem from="1499965908254" duration="28330000" />
-      <workItem from="1500226024254" duration="14198000" />
+      <workItem from="1500226024254" duration="16080000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105916000" />
+    <option name="totallyTimeSpent" value="107798000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="874" extended-state="6" />
@@ -1192,7 +1176,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1249,11 +1233,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Post.php">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/PostController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="143" column="28" lean-forward="false" selection-start-line="143" selection-start-column="28" selection-end-line="143" selection-end-column="28" />
-          <folding />
+        <state relative-caret-position="56">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <element signature="e#1182#1198#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1265,29 +1251,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/components/new_post_form.html.twig">
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Entity/Post.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1019">
-          <caret line="77" column="54" lean-forward="false" selection-start-line="77" selection-start-column="54" selection-end-line="77" selection-end-column="54" />
+        <state relative-caret-position="391">
+          <caret line="143" column="28" lean-forward="false" selection-start-line="143" selection-start-column="28" selection-end-line="143" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/components/new_post.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="586">
-          <caret line="88" column="29" lean-forward="true" selection-start-line="88" selection-start-column="29" selection-end-line="88" selection-end-column="29" />
+        <state relative-caret-position="126">
+          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/AppBundle/Controller/PostController.php">
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/components/new_post_form.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="41" column="22" lean-forward="false" selection-start-line="41" selection-start-column="22" selection-end-line="41" selection-end-column="22" />
-          <folding>
-            <element signature="e#978#994#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="725">
+          <caret line="77" column="54" lean-forward="false" selection-start-line="77" selection-start-column="54" selection-end-line="77" selection-end-column="54" />
+          <folding />
         </state>
       </provider>
     </entry>

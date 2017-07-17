@@ -70,12 +70,6 @@ $(function(){
         var reps = new_record_reps_input.val();
         var lift = new_record_lift_select.val();
 
-        // if (lift.val() == 0){
-        //     lift = null;
-        // }
-        // else {
-        //     lift = lift;
-        // }
 
         $.ajax({
             type: 'POST',
