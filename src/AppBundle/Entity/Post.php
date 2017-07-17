@@ -126,13 +126,22 @@ class Post
      */
     private $location;
 
-    public function __construct(User $user, $content = "", $type) {
+
+    /**
+     * @var Lift
+     *
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Lift", inversedBy="post")
+     */
+    private $lift;
+
+    public function __construct(User $user, $content = "", $type, $weight, $reps, $lift) {
         $this->dateCreated = new \DateTime();
         $this->user = $user;
         $this->content = $content;
         $this->type = $type;
-        
-
+        $this->weight = $weight;
+        $this->reps = $reps;
+        $this->lift = $lift;
 
     }
 
@@ -393,6 +402,22 @@ class Post
     public function setReps($reps)
     {
         $this->reps = $reps;
+    }
+
+    /**
+     * @return Lift
+     */
+    public function getLift()
+    {
+        return $this->lift;
+    }
+
+    /**
+     * @param Lift $lift
+     */
+    public function setLift($lift)
+    {
+        $this->lift = $lift;
     }
 }
 

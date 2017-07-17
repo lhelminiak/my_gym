@@ -18,21 +18,30 @@ class PostController extends Controller
      * @return JsonResponse
      * @Route("/ajax_new_post", name="ajaxNewPost")
      */
-    public function newPost(Request $request){
+    public function newPostAction(Request $request){
         $request->isXmlHttpRequest();
 
         if(!$request->isXmlHttpRequest()){
             return new JsonResponse(array("Success" => false));
         }
 
+        $em = $this->get('doctrine.orm.entity_manager');
 
         $user = $this->getUser();
 
         $content = $request->request->get("content");
 
-        $post = new Post($user, $content, 0);
+        $type = $request->request->get("type");
 
-        $em = $this->get('doctrine.orm.entity_manager');
+        $lift = $em->getReference('AppBundle:Lift', $request->request->get("lift_id"));
+
+        $weight = $request->request->get("weight");
+
+        $reps = $request->request->get("reps");
+
+        $post = new Post($user, $content, $type, $weight, $reps, $lift);
+
+
         $em->persist($post);
         $em->flush();
 

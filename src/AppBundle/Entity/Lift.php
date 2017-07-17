@@ -48,6 +48,19 @@ class Lift
     private $category;
 
 
+
+    // Relationships
+
+
+    /**
+     * @var Post
+     *
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Post", mappedBy="lift")
+     */
+    private $post;
+
+
+
     /**
      * Get id
      *
@@ -128,6 +141,22 @@ class Lift
     public function getCategory()
     {
         return $this->category;
+    }
+
+    /**
+     * @return Post
+     */
+    public function getPost()
+    {
+        return $this->post;
+    }
+
+    /**
+     * @param Post $post
+     */
+    public function setPost($post)
+    {
+        $this->post = $post;
     }
 }
 
