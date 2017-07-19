@@ -37,7 +37,7 @@ class Gym
      *
      * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", inversedBy="gyms")
      */
-    private $users;
+    private $user;
 
     /**
      * @var Location
@@ -81,21 +81,6 @@ class Gym
         return $this->name;
     }
 
-    /**
-     * @return User
-     */
-    public function getUsers()
-    {
-        return $this->users;
-    }
-
-    /**
-     * @param User $users
-     */
-    public function setUsers($users)
-    {
-        $this->users = $users;
-    }
 
     /**
      * @return Location
@@ -111,6 +96,22 @@ class Gym
     public function setLocation($location)
     {
         $this->location = $location;
+    }
+
+    /**
+     * @return User
+     */
+    public function getUser()
+    {
+        return $this->user;
+    }
+
+    /**
+     * @param User $user
+     */
+    public function setUser($user)
+    {
+        $this->user = $user;
     }
 
 }

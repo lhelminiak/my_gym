@@ -19,12 +19,16 @@ class ComponentController extends Controller
 
     public function renderNewPostFormViewAction(){
 
+        $user = $this->getUser();
 
         $lifts = $this->getDoctrine()->getRepository('AppBundle:Lift')->findAll();
 
+        $query = $this->getDoctrine()->getRepository('AppBundle:Gym')->getAllGymsForUserQuery($user);
+
 
         return $this->render(':components:new_post_form.html.twig', array(
-            'lifts' => $lifts
+            'lifts' => $lifts,
+            'gyms' => $query
 
         ));
 

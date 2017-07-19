@@ -1,4 +1,5 @@
 $(function(){
+
     var current_post_type = 0;
     var postActions   = $( '#list_PostActions' );
     var currentAction = $( '#list_PostActions li.active' );
@@ -17,7 +18,13 @@ $(function(){
     var new_record_lift_select = $('#new_record_lift_select');
     var new_record_weight_input = $('#new_record_weight_input');
     var new_record_reps_input = $('#new_record_reps_input');
+
     var new_post_content_input = $('#new_post_content_input');
+
+    var new_lift_request_lift_select = $('#new_lift_request_lift_select');
+    var new_lift_request_gym_select = $('#new_lift_request_gym_select');
+    var new_lift_request_date_time_input = $('#new_lift_request_date_time_input');
+
 
     // Buttons
     var new_post_submit_button = $('#new_post_submit_button');
@@ -66,9 +73,37 @@ $(function(){
 
     new_post_submit_button.on('click', function () {
 
+
+
         var weight = new_record_weight_input.val();
         var reps = new_record_reps_input.val();
-        var lift = new_record_lift_select.val();
+        var lift = null;
+        var gym = new_lift_request_gym_select.val();
+
+
+
+
+        // Convert LiftTime value to valid DateTime Object
+        var time = new_lift_request_date_time_input.val();
+        alert(time);
+
+        // var liftTime = new Date(time);
+        //
+        // liftTime = moment(liftTime).format("YYYY-MM-DD HH:mm:ss");
+        // alert(liftTime);
+
+        time = moment(time).format("YYYY-MM-DD HH:mm:ss");
+        alert(time);
+
+
+
+
+        if(current_post_type = 2){
+            lift = new_lift_request_lift_select.val();
+        }
+        else{
+            lift = new_record_lift_select.val();
+        }
 
 
         $.ajax({
@@ -80,7 +115,10 @@ $(function(){
                 content: new_post_content_input.val(),
                 weight: weight,
                 reps: reps,
-                lift_id: lift
+                lift_id: lift,
+                gym_id: gym,
+                liftTime: time
+
 
 
             },
@@ -106,6 +144,8 @@ $(function(){
     function init() {
         new_record_input_fields.hide();
         new_lift_request_fields.hide();
+
+        $('#datetimepicker').datetimepicker();
 
 
 

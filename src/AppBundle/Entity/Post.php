@@ -134,7 +134,7 @@ class Post
      */
     private $lift;
 
-    public function __construct(User $user, $content = "", $type, $weight = null, $reps = null, $lift = null) {
+    public function __construct(User $user, $content = "", $type, $weight = null, $reps = null, $lift = null, $location = null, $liftTime = null) {
         $this->dateCreated = new \DateTime();
         $this->user = $user;
         $this->content = $content;
@@ -142,6 +142,8 @@ class Post
         $this->weight = $weight;
         $this->reps = $reps;
         $this->lift = $lift;
+        $this->location = $location;
+        $this->liftTime = $liftTime;
 
     }
 

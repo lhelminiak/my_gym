@@ -1,6 +1,7 @@
 <?php
 
 namespace AppBundle\Repository;
+use AppBundle\Entity\User;
 
 /**
  * GymRepository
@@ -10,4 +11,23 @@ namespace AppBundle\Repository;
  */
 class GymRepository extends \Doctrine\ORM\EntityRepository
 {
+
+    /**
+     * Returns All Gyms for User
+     *
+     * @param User $user
+     *
+     * @return array
+     */
+    public function getAllGymsForUserQuery(User $user){
+        $query = $this->createQueryBuilder('gym')
+            ->where('gym.user = :user')
+            ->setParameter('user', $user)
+            ->getQuery();
+
+        return $query->getResult();
+
+    }
+
+
 }

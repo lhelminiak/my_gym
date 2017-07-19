@@ -21,16 +21,16 @@
 
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
 
-        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
 
 
-        {#<link href="{{ asset('css/datepicker.css') }}" rel="stylesheet"/>#}
+        <link href="{{ asset('css/bootstrap-datetimepicker.css') }}" rel="stylesheet"/>
 
 
 
 
 
-        <!-- Bootstrap Stylesheet -->
+
 
 
     </head>
@@ -61,9 +61,15 @@
 
             <script src="{{ asset('js/components/new_post.js') }}"></script>
 
-            {#<script src="{{ asset('js/moment.js') }}"></script>#}
+            {#Moment.js CDN#}
+            <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
 
-            {#<script src="{{ asset('js/bootstrap-datepicker.js') }}"></script>#}
+            {#DateTimePicker JavaScript#}
+            <script src="{{ asset('js/bootstrap-datetimepicker.min.js') }}"></script>
+
+
+
+
         {% endblock %}
     </body>
 </html>

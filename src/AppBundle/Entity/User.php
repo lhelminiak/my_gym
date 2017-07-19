@@ -120,7 +120,7 @@ class User extends BaseUser
     /**
      * @var ArrayCollection
      *
-     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Gym", mappedBy="users")
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Gym", mappedBy="user")
      */
     private $gyms;
 

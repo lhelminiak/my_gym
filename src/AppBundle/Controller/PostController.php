@@ -8,6 +8,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpKernel\Controller\ArgumentResolver\RequestValueResolver;
+use Symfony\Component\Validator\Constraints\Date;
+
 
 class PostController extends Controller
 {
@@ -37,8 +39,6 @@ class PostController extends Controller
         $type = $request->request->get("type");
 
 
-//        $post = new Post($user, $content, $type, $weight, $reps, $lift);
-
 
         if($type == 0){
             $post = new Post($user, $content, $type);
@@ -55,10 +55,35 @@ class PostController extends Controller
 
             $post = new Post($user, $content, $type, $weight, $reps, $lift);
         }
+        else{
+
+            $lift = $em->getReference('AppBundle:Lift', $request->request->get("lift_id"));
+
+//            $location = $em->getReference('AppBundle:Location', $request->request->get("gym_id"));
+
+            $location = $this->getDoctrine()->getRepository('AppBundle:Location')->find($request->request->get("gym_id"));
+
+            $liftTime = $request->request->get('liftTime');
+
+            $date = new \DateTime($liftTime);
+
+//            var $dateTime = new DateTime($liftTime);
+
+
+
+
+
+
+            $post = new Post($user, $content, $type, null, null, $lift, $location, $date);
+
+
+
+        }
 
 
         $em->persist($post);
         $em->flush();
+        $em->clear();
 
         return new JsonResponse(array('success'=> true));
 

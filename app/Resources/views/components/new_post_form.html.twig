@@ -55,14 +55,22 @@
 
                             <select class="form-control" id="new_lift_request_gym_select">
                                 <option value="">Select a gym..</option>
+                                {% for gym in gyms %}
+                                    <option value="{{ gym.id }}">{{ gym.name }}</option>
+                                {% endfor %}
 
                             </select>
 
                         </div>
 
-                        <div class="col-md-4 col-xs-4">
+                        <div class="col-md-4 col-xs-4" style="padding-left: 0px;">
 
-                            {#Add DateTimePicker Here#}
+                            <div class="input-group date" id="datetimepicker">
+                                <input id="new_lift_request_date_time_input" type="text" class="form-control" />
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-calendar"></span>
+                                </span>
+                            </div>
 
 
                         </div>
