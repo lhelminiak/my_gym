@@ -3,6 +3,7 @@
 namespace AppBundle\Controller;
 
 use AppBundle\Entity\Post;
+use AppBundle\Entity\Record;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -41,7 +42,10 @@ class PostController extends Controller
 
 
         if($type == 0){
-            $post = new Post($user, $content, $type);
+            $post = new Post($user, $content, $type, null, null, null, null, null);
+
+            $em->persist($post);
+            $em->flush();
 
         }
         elseif ($type == 1){
@@ -53,13 +57,28 @@ class PostController extends Controller
             $reps = $request->request->get("reps");
 
 
-            $post = new Post($user, $content, $type, $weight, $reps, $lift);
+            $post = new Post($user, $content, $type, $weight, $reps, $lift, null, null);
+
+
+            $em->persist($post);
+            $em->flush();
+
+
+            $id = $post->getId();
+            $post = $em->getReference('AppBundle:Post', $id);
+
+            $record = new Record($user, $weight, $reps, $lift, $post);
+
+            $em->persist($record);
+            $em->flush();
+
+
+
         }
         else{
 
             $lift = $em->getReference('AppBundle:Lift', $request->request->get("lift_id"));
 
-//            $location = $em->getReference('AppBundle:Location', $request->request->get("gym_id"));
 
             $location = $this->getDoctrine()->getRepository('AppBundle:Location')->find($request->request->get("gym_id"));
 
@@ -67,22 +86,20 @@ class PostController extends Controller
 
             $date = new \DateTime($liftTime);
 
-//            var $dateTime = new DateTime($liftTime);
-
-
-
-
-
 
             $post = new Post($user, $content, $type, null, null, $lift, $location, $date);
 
-
+            $em->persist($post);
+            $em->flush();
 
         }
 
 
-        $em->persist($post);
-        $em->flush();
+
+
+
+//        $em->persist($post);
+//        $em->flush();
         $em->clear();
 
         return new JsonResponse(array('success'=> true));

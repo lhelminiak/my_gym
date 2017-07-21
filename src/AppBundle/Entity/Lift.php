@@ -60,6 +60,13 @@ class Lift
     private $post;
 
 
+    /**
+     * @var Record
+     *
+     * @ORM\OneToOne(targetEntity="AppBundle\Entity\Record", mappedBy="lift")
+     */
+    private $record;
+
 
     /**
      * Get id
@@ -157,6 +164,22 @@ class Lift
     public function setPost($post)
     {
         $this->post = $post;
+    }
+
+    /**
+     * @return Record
+     */
+    public function getRecord()
+    {
+        return $this->record;
+    }
+
+    /**
+     * @param Record $record
+     */
+    public function setRecord($record)
+    {
+        $this->record = $record;
     }
 }
 

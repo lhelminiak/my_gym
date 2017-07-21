@@ -85,25 +85,17 @@ $(function(){
 
         // Convert LiftTime value to valid DateTime Object
         var time = new_lift_request_date_time_input.val();
-        alert(time);
-
-        // var liftTime = new Date(time);
-        //
-        // liftTime = moment(liftTime).format("YYYY-MM-DD HH:mm:ss");
-        // alert(liftTime);
-
         time = moment(time).format("YYYY-MM-DD HH:mm:ss");
-        alert(time);
 
 
-
-
-        if(current_post_type = 2){
+        if(current_post_type == 2){
             lift = new_lift_request_lift_select.val();
         }
         else{
             lift = new_record_lift_select.val();
         }
+
+
 
 
         $.ajax({
@@ -128,6 +120,7 @@ $(function(){
             },
             success: function (response) {
                 console.log(response);
+
 
 
             }

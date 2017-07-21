@@ -125,6 +125,14 @@ class User extends BaseUser
     private $gyms;
 
 
+    /**
+     * @var ArrayCollection
+     *
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Record", mappedBy="user")
+     */
+    private $records;
+
+
 
     public function __construct()
     {

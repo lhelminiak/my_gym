@@ -48,8 +48,41 @@ class Record
 
 //    Relationships
 
+    /**
+     * @var Post
+     *
+     * @ORM\OneToOne(targetEntity="AppBundle\Entity\Post", inversedBy="record")
+     */
+    private $post;
+
+    /**
+     * @var User
+     *
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\User", inversedBy="records")
+     */
+    private $user;
 
 
+    /**
+     * @var Lift
+     *
+     * @ORM\OneToOne(targetEntity="AppBundle\Entity\Lift", inversedBy="record")
+     */
+    private $lift;
+
+
+
+    // Constructor
+
+    public function __construct(User $user, $weight, $reps, $lift, $post){
+        $this->dateCreated = new \DateTime();
+        $this->user = $user;
+        $this->weight = $weight;
+        $this->reps = $reps;
+        $this->post = $post;
+        $this->lift = $lift;
+
+    }
 
 
     /**
@@ -140,6 +173,38 @@ class Record
     public function setDateCreated($dateCreated)
     {
         $this->dateCreated = $dateCreated;
+    }
+
+    /**
+     * @return Post
+     */
+    public function getPost()
+    {
+        return $this->post;
+    }
+
+    /**
+     * @param Post $post
+     */
+    public function setPost($post)
+    {
+        $this->post = $post;
+    }
+
+    /**
+     * @return Lift
+     */
+    public function getLift()
+    {
+        return $this->lift;
+    }
+
+    /**
+     * @param Lift $lift
+     */
+    public function setLift($lift)
+    {
+        $this->lift = $lift;
     }
 }
 

@@ -13,7 +13,7 @@
 }
 
 .panel-body {
-    padding: 4% 4% 5% 7%;
+    padding: 4% 0% 0% 0%;
 }
 
 .box {
@@ -36,6 +36,9 @@
     background: rgb(243,243,243);
     border-radius: 9px;
     padding-left: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 15px;
 }
 
 .stat {

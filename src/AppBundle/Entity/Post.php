@@ -134,6 +134,27 @@ class Post
      */
     private $lift;
 
+    /**
+     * @var Record
+     *
+     * @ORM\OneToOne(targetEntity="AppBundle\Entity\Record", mappedBy="post")
+     */
+    private $record;
+
+
+
+
+    /**
+     * Post constructor.
+     * @param User $user
+     * @param string $content
+     * @param $type
+     * @param null $weight
+     * @param null $reps
+     * @param null $lift
+     * @param null $location
+     * @param null $liftTime
+     */
     public function __construct(User $user, $content = "", $type, $weight = null, $reps = null, $lift = null, $location = null, $liftTime = null) {
         $this->dateCreated = new \DateTime();
         $this->user = $user;
@@ -420,6 +441,22 @@ class Post
     public function setLift($lift)
     {
         $this->lift = $lift;
+    }
+
+    /**
+     * @return Record
+     */
+    public function getRecord()
+    {
+        return $this->record;
+    }
+
+    /**
+     * @param Record $record
+     */
+    public function setRecord($record)
+    {
+        $this->record = $record;
     }
 }
 
