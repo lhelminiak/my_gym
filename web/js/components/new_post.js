@@ -120,6 +120,7 @@ $(function(){
             },
             success: function (response) {
                 console.log(response);
+                // window.location.reload();
 
 
 

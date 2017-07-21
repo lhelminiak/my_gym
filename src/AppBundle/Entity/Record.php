@@ -66,7 +66,7 @@ class Record
     /**
      * @var Lift
      *
-     * @ORM\OneToOne(targetEntity="AppBundle\Entity\Lift", inversedBy="record")
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Lift", inversedBy="record")
      */
     private $lift;
 

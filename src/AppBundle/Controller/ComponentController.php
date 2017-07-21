@@ -3,6 +3,7 @@
 namespace AppBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Response;
 
 class ComponentController extends Controller
 {
@@ -29,6 +30,17 @@ class ComponentController extends Controller
         return $this->render(':components:new_post_form.html.twig', array(
             'lifts' => $lifts,
             'gyms' => $query
+
+        ));
+
+
+    }
+
+
+    public function renderPostsViewAction($posts){
+
+        return $this->render(':components:post_body.html.twig', array(
+            'posts' => $posts
 
         ));
 

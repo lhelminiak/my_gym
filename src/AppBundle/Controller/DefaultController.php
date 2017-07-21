@@ -24,18 +24,16 @@ class DefaultController extends Controller
 
     }
 
-    /**
-     * @Route("/post")
-     */
-    public function showPost(){
 
-
-
-        return $this->render('default/post.html.twig',[
-
-
-        ]);
-    }
+//    public function showPost(){
+//
+//
+//
+//        return $this->render('default/post.html.twig',[
+//
+//
+//        ]);
+//    }
 
 
 

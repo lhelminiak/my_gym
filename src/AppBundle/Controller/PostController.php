@@ -50,7 +50,9 @@ class PostController extends Controller
         }
         elseif ($type == 1){
 
-            $lift = $em->getReference('AppBundle:Lift', $request->request->get("lift_id"));
+//            $lift = $em->getReference('AppBundle:Lift', $request->request->get("lift_id"));
+
+            $lift = $this->getDoctrine()->getRepository('AppBundle:Lift')->find($request->request->get("lift_id"));
 
             $weight = $request->request->get("weight");
 
@@ -77,7 +79,10 @@ class PostController extends Controller
         }
         else{
 
-            $lift = $em->getReference('AppBundle:Lift', $request->request->get("lift_id"));
+//            $lift = $em->getReference('AppBundle:Lift', $request->request->get("lift_id"));
+
+            $lift = $this->getDoctrine()->getRepository('AppBundle:Lift')->find($request->request->get("lift_id"));
+
 
 
             $location = $this->getDoctrine()->getRepository('AppBundle:Location')->find($request->request->get("gym_id"));
@@ -98,8 +103,7 @@ class PostController extends Controller
 
 
 
-//        $em->persist($post);
-//        $em->flush();
+
         $em->clear();
 
         return new JsonResponse(array('success'=> true));

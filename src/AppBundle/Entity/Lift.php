@@ -63,7 +63,7 @@ class Lift
     /**
      * @var Record
      *
-     * @ORM\OneToOne(targetEntity="AppBundle\Entity\Record", mappedBy="lift")
+     * @ORM\OneToMany(targetEntity="AppBundle\Entity\Record", mappedBy="lift")
      */
     private $record;
 

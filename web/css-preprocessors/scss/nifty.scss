@@ -1,0 +1,33 @@
+/* IMPORTANT :
+* ===================================================================================================
+* DON'T EDIT ANY CODE HERE, JUST LEAVE IT.
+*
+* You may edit the default color scheme.
+* You may change the variable value inside the _variables.SCSS file and re-compiling using this file.
+*
+* If you make changes directly in the CSS and/ or SCSS-files from Nifty,
+* it will be hard to update if I release an update. So I would recommend to create a new CSS/ SCSS-file for this purpose.
+*/
+
+
+
+
+
+
+@import "variables";
+$main-compile       : true;
+
+// Set as default color scheme.
+// @import "themes/type-a/theme-coffee";
+
+
+
+@import "nifty/layout";
+@import "nifty/navbar";
+@import "nifty/mainnav";
+@import "nifty/aside";
+@import "nifty/footer";
+@import "nifty/animations";
+@import "nifty/extras";
+@import "nifty/bs-overwrite";
+@import "nifty/helper-classes";
