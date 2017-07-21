@@ -37,13 +37,13 @@ class ComponentController extends Controller
     }
 
 
-    public function renderPostsViewAction($posts){
-
-        return $this->render(':components:post_body.html.twig', array(
-            'posts' => $posts
-
-        ));
-
-
-    }
+//    public function renderPostsViewAction($posts){
+//
+//        return $this->render(':components:post_body.html.twig', array(
+//            'posts' => $posts
+//
+//        ));
+//
+//
+//    }
 }
